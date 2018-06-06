@@ -5,7 +5,7 @@ class Input {
 	constructor(){
 		this.mouseX = 0;
 		this.mouseY = 0;
-		this.mouseDown = false;    // True if the mouse is currently held down
+		this.mouseDown = false;    // True if the mouse is currently held down.
 		this.mousePressed = false; // True during the frame the mouse was pressed.
 
 		window.addEventListener("mousemove", onMouseMove);
@@ -14,7 +14,7 @@ class Input {
 	}
 
 	preUpdate(){
-		
+
 	}
 
 	postUpdate(){

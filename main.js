@@ -15,11 +15,33 @@ var g;
 })();
 
 function mainLoop(){
+	g_input.preUpdate();
+
+	update();
+
 	// Clear screen
 	g.fillStyle = 'black';
 	g.fillRect(0, 0, canvas.width, canvas.height);
 
-	var x = Math.sin(Date.now() * .005) * 100 + canvas.width/2;
+	var x = g_input.mouseX;
+	var y = g_input.mouseY;
+
 	g.fillStyle = 'white';
-	g.fillRect(x - 25, canvas.height/2 - 25, 50, 50);
+	if(g_input.mouseDown){
+		g.fillStyle = 'orange';
+	}
+	if(g_input.mousePressed){
+		g.fillStyle = 'blue';
+	}
+	fillRectCentered(g, x, y, 10, 10);
+
+	g_input.postUpdate();
+}
+
+function update(){
+
+}
+
+function draw(){
+
 }
