@@ -1,0 +1,8 @@
+{
+	"name": "picross",
+	"version": "0.0.1",
+	"description": "",
+	"dependencies": {
+		"express": "^4.15.2"
+	}
+}
