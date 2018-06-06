@@ -1,16 +1,5 @@
 
-var canvas;
-var g;
-
 (function(){
-	canvas = document.createElement('canvas');
-	g = canvas.getContext('2d');
-
-	canvas.width = 800;
-	canvas.height = 600;
-
-	document.body.appendChild(canvas);
-
 	window.setInterval(mainLoop, 1000/30);
 })();
 
@@ -25,7 +14,7 @@ function mainLoop(){
 }
 
 function update(){
-
+	g_board.update();
 }
 
 function draw(){
