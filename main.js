@@ -19,10 +19,27 @@ function mainLoop(){
 
 	update();
 
+	g_input.postUpdate();
+
+	draw();
+}
+
+function update(){
+
+}
+
+function draw(){
 	// Clear screen
 	g.fillStyle = 'black';
 	g.fillRect(0, 0, canvas.width, canvas.height);
 
+	
+
+	g_board.draw();
+
+
+
+	// Draw mouse cursor
 	var x = g_input.mouseX;
 	var y = g_input.mouseY;
 
@@ -34,14 +51,4 @@ function mainLoop(){
 		g.fillStyle = 'blue';
 	}
 	fillRectCentered(g, x, y, 10, 10);
-
-	g_input.postUpdate();
-}
-
-function update(){
-
-}
-
-function draw(){
-
 }
